@@ -37,57 +37,23 @@
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.snia</groupId>
-  <artifactId>cdmi-parent</artifactId>
-  <version>1.0e-dCache-1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>CDMI parent project</name>
-  <description>Library code for supporting CDMI operations</description>
 
-  <properties>
-      <version.httpcomponents>4.0.1</version.httpcomponents>
-  </properties>
+  <parent>
+      <groupId>org.snia</groupId>
+      <artifactId>cdmi-parent</artifactId>
+      <version>1.0e-dCache-1-SNAPSHOT</version>
+  </parent>
 
-  <modules>
-      <module>cdmi-core</module>
-      <module>cdmi-web</module>
-  </modules>
+  <artifactId>cdmi-server</artifactId>
+  <packaging>war</packaging>
+  <name>CDMI server</name>
+  <description>A deployable war file for the CDMI server</description>
 
-  <repositories>
-      <repository>
-	  <id>dcache.repository</id>
-	  <url>https://download.dcache.org/nexus/content/groups/public</url>
-      </repository>
-  </repositories>
-
-  <scm>
-        <connection>scm:git:https://github.com/dCache/CDMI.git</connection>
-        <developerConnection>scm:git:git@github.com:dCache/CDMI.git</developerConnection>
-        <url>https://github.com/dCache/CDMI.git</url>
-  </scm>
-
-
-  <pluginRepositories>
-      <pluginRepository>
-	  <id>dcache.repository</id>
-	  <url>https://download.dcache.org/nexus/content/groups/public</url>
-      </pluginRepository>
-  </pluginRepositories>
-
-
-  <distributionManagement>
-      <downloadUrl>https://download.dcache.org/nexus/content/groups/public</downloadUrl>
-
-      <repository>
-	  <id>cdmi</id>
-	  <name>CDMI releases</name>
-	  <url>https://download.dcache.org/nexus/content/repositories/cdmi</url>
-      </repository>
-
-      <snapshotRepository>
-	  <id>cdmi-snapshots</id>
-	  <name>CDMI snapshots</name>
-	  <url>https://download.dcache.org/nexus/content/repositories/cdmi-snapshots</url>
-      </snapshotRepository>
-  </distributionManagement>
+  <dependencies>
+      <dependency>
+          <groupId>org.snia</groupId>
+          <artifactId>cdmi-server-core</artifactId>
+          <version>${project.version}</version>
+      </dependency>
+  </dependencies>
 </project>
