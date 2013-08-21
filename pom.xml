@@ -79,7 +79,7 @@
 
   <scm>
       <connection>scm:git:https://github.com/dCache/CDMI.git</connection>
-      <developerConnection>scm:git:git//github.com/dCache/CDMI.git</developerConnection>
+      <developerConnection>scm:git:git@github.com:dCache/CDMI.git</developerConnection>
       <url>https://github.com/dCache/CDMI.git</url>
   </scm>
 
