@@ -31,46 +31,59 @@
  *  THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<project       xmlns="http://maven.apache.org/POM/4.0.0"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.snia</groupId>
-  <artifactId>cdmi-parent</artifactId>
-  <version>1.0e-dCache-1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>CDMI parent project</name>
-  <description>Library code for supporting CDMI operations</description>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.snia</groupId>
+    <artifactId>cdmi-parent</artifactId>
+    <version>1.0e-dCache-1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>CDMI parent project</name>
+    <description>Library code for supporting CDMI operations</description>
 
-  <properties>
-      <version.httpcomponents>4.0.1</version.httpcomponents>
-  </properties>
+    <properties>
+        <version.httpcomponents>4.0.1</version.httpcomponents>
+    </properties>
 
-  <modules>
-      <module>cdmi-core</module>
-      <module>cdmi-web</module>
-  </modules>
+    <modules>
+        <module>cdmi-core</module>
+        <module>cdmi-web</module>
+    </modules>
 
-  <repositories>
-      <repository>
-	  <id>dcache.repository</id>
-	  <url>https://download.dcache.org/nexus/content/groups/public</url>
-      </repository>
-  </repositories>
+    <repositories>
+        <repository>
+            <id>dcache.repository</id>
+            <url>https://download.dcache.org/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.4.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 
   <scm>
-        <connection>scm:git:https://github.com/dCache/CDMI.git</connection>
-        <developerConnection>scm:git:git@github.com:dCache/CDMI.git</developerConnection>
-        <url>https://github.com/dCache/CDMI.git</url>
+      <connection>scm:git:https://github.com/dCache/CDMI.git</connection>
+      <developerConnection>scm:git:git//github.com/dCache/CDMI.git</developerConnection>
+      <url>https://github.com/dCache/CDMI.git</url>
   </scm>
 
 
   <pluginRepositories>
       <pluginRepository>
-	  <id>dcache.repository</id>
-	  <url>https://download.dcache.org/nexus/content/groups/public</url>
+          <id>dcache.repository</id>
+          <url>https://download.dcache.org/nexus/content/groups/public</url>
       </pluginRepository>
   </pluginRepositories>
 
@@ -79,15 +92,15 @@
       <downloadUrl>https://download.dcache.org/nexus/content/groups/public</downloadUrl>
 
       <repository>
-	  <id>cdmi</id>
-	  <name>CDMI releases</name>
-	  <url>https://download.dcache.org/nexus/content/repositories/cdmi</url>
+          <id>cdmi</id>
+          <name>CDMI releases</name>
+          <url>https://download.dcache.org/nexus/content/repositories/cdmi</url>
       </repository>
 
       <snapshotRepository>
-	  <id>cdmi-snapshots</id>
-	  <name>CDMI snapshots</name>
-	  <url>https://download.dcache.org/nexus/content/repositories/cdmi-snapshots</url>
+          <id>cdmi-snapshots</id>
+          <name>CDMI snapshots</name>
+          <url>https://download.dcache.org/nexus/content/repositories/cdmi-snapshots</url>
       </snapshotRepository>
   </distributionManagement>
 </project>
